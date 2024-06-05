@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 函数</title>
+</head>
+<body>
+    <script>
+        function hello_with_params(name){
+            console.log('name');
+        }
+        hello_with_params('如花');
+        let global_var = '全局变量';
+        function local_var_function() {
+            let local_var = "局部变量";
+            console.log('函数内打印 全局变量'+ global_var);
+            console.log('函数内打印 局部变量'+ local_var);
+        }
+        local_var_function();
+
+        console.log('函数outside打印 全局变量'+ global_var);
+        console.log('函数outside打印 全局变量'+ local_var);
+    </script>
+
+
+</body>
+</html>
