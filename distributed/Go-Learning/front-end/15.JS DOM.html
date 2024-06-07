@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+    <div id="box1">这是一个ID选择器标签</div>
+    <div class="box2">这是一个类选择器标签</div>
+    <div>这是一个普通的div标签</div>
+    <button>点击按钮_click </button>
+    <script>
+         var element_id = document.getElementById('box1');
+        console.log(element_id);
+        // 获取的是数组，还得标记一下序号
+        var elment_class = document.getElementsByClassName('box2')[1];
+        console.log(elment_class);
+        var element_tag = document.getElementsByTagName('div')[2]
+        console.log(element_tag);
+
+        element_id.innerHTML = '<a href="#">跳转链接</a>';
+        element_class.innerText = '<a href="#">跳转链接</a>';
+        // DOM属性绑定事件
+        var button_element = document.getElementsByTagName("button")
+        console.log(button_element);
+        function click_event() {
+            alert('DOM 属性 按键触发')
+        }
+        button_element.addEventListener('clikck',click_event)
+    </script>
+    
+</body>
+</html>
